@@ -1,0 +1,37 @@
+{
+  "ref_purchase_order": 1,
+  "purchase_details": [
+    {
+      "ref_purchase_order_detail": 1,
+      "qty": 10,
+      "item": 1,
+      "packing_type":"",
+      "packing_type_detail":"",
+      "pack_type_codes": [
+        {
+          "pack_no": 1,
+          "pack_type_detail_codes": [
+            {
+              "code": "serial no from scan 1"
+            },
+            {
+              "code": "serial no from scan 2"
+            }
+          ]
+        },
+        {
+          "pack_no": 2,
+          "pack_type_detail_codes": [
+            {
+              "code": "serial no from scan 1"
+            },
+            {
+              "code": "serial no from scan 2"
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;  
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: greenyellow; /* Modern Browsers */
+            }
+        </style>
+</head>
+<body>
+    <div class='wrapper'>
+        <div class='header'>
+            <p class='title'>This is Test</p>
+        </div>
+    <div>
+    <div>
+        Date: 2021-06-13<br/>
+        Amount: 200 <br/>
+      <hr/>
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <td>purchase_no</td>
+                <td>sub_total </td>
+                <td>total_discount </td>
+                <td>grand_total </td>  
+            </tr>
+            
+            {% for purchase_master in purchase_masters %}
+            <tr>
+                <td>{{purchase_master.purchase_no}}</td>
+                <td>{{purchase_master.sub_total}}</td>
+                <td>{{purchase_master.total_discount}}</td>
+                <td>{{purchase_master.grand_total }}</td>
+                
+            </tr>
+            {% endfor %}
+            <hr>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td>{{totals.total_discount}}</td>
+                <td>{{totals.grand_total}}</td>
+            </tr>
+        </table>
+        
+    </div>
+</div>
+</body>
+</html>
